@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.devatma.wear.notifications4watch" >
+
+    <uses-sdk
+        android:maxSdkVersion="19"
+        android:minSdkVersion="7"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.devatma.wear.notifications4watch.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.devatma.wear.notifications4watch.DisplayMessageActivity"
+            android:label="@string/title_activity_display_message"
+            android:parentActivityName="com.devatma.wear.notifications4watch.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ccom.devatma.wear.notifications4watch.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="com.devatma.wear.notifications4watch.NotificationActivity"
+            android:label="@string/title_activity_notification" >
+        </activity>
+    </application>
+
+</manifest>
+
