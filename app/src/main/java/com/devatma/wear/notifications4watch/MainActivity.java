@@ -1,27 +1,24 @@
 package com.devatma.wear.notifications4watch;
 
-import java.util.*;
-
 import android.app.Activity;
+import android.app.Notification;
+import android.app.PendingIntent;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.media.RingtoneManager;
 import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationCompat.BigTextStyle;
+import android.support.v4.app.NotificationManagerCompat;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.util.Log;
-import android.content.Intent;
 import android.widget.EditText;
 
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.NotificationCompat.BigTextStyle;
-
-import android.app.Notification;
-import android.app.PendingIntent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.support.v4.app.NotificationManagerCompat;
-
-import com.devatma.wear.notifications4watch.R;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends Activity {
     private static final String TAG = "MainActivity";
@@ -72,8 +69,7 @@ public class MainActivity extends Activity {
         String message = editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);
         showStackNotifications(message);
-        //showPageNotifications();
-        startActivity(intent);
+        showPageNotifications();
 
     }
 
